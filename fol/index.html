@@ -58,7 +58,7 @@
 	</head>
 
 	<body>
-		<div id="d">
+		<!--<div id="d">
 			<div id="info">
 				<a href="http://threejs.org" target="_blank">three.js</a> webgl demo :
 				texture by <a href="http://www.humus.name/index.php?page=Textures" target="_blank">Humus</a> :
@@ -69,7 +69,7 @@
 
 			</div>
 			
-</div>
+</div>-->
 
 			<div id="buttons_cars" class="bwrap">
 				<button id="veyron">Bugatti Veyron</button>
@@ -87,23 +87,7 @@
 
 		<script src="js/Detector.js"></script>
 		<script src="js/libs/stats.min.js"></script>
-<script>
- var video = document.querySelector("#videoElement");
- 
-navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia || navigator.oGetUserMedia;
- 
-if (navigator.getUserMedia) {       
-    navigator.getUserMedia({video: true}, handleVideo, videoError);
-}
- 
-function handleVideo(stream) {
-    video.src = window.URL.createObjectURL(stream);
-}
- 
-function videoError(e) {
-    // do something
-}
-</script>
+
 		<script>
 
 			if ( ! Detector.webgl ) Detector.addGetWebGLMessage();
@@ -650,5 +634,22 @@ function videoError(e) {
     <video autoplay="true" id="videoElement">
      
     </video>
+	<script>
+ var video = document.querySelector("#videoElement");
+ 
+navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia || navigator.oGetUserMedia;
+ 
+if (navigator.getUserMedia) {       
+    navigator.getUserMedia({video: true}, handleVideo, videoError);
+}
+ 
+function handleVideo(stream) {
+    video.src = window.URL.createObjectURL(stream);
+}
+ 
+function videoError(e) {
+    // do something
+}
+</script>
 	</body>
 </html>
