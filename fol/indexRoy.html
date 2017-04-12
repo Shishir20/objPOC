@@ -103,16 +103,16 @@
 
 				var mtlLoader = new THREE.MTLLoader();
 				mtlLoader.setPath( 'obj/male02/' );
-				mtlLoader.load( 'champagne.mtl', function( materials ) {
+				mtlLoader.load( 'airoplane.mtl', function( materials ) {
 
 					materials.preload();
 
 					var objLoader = new THREE.OBJLoader();
 					objLoader.setMaterials( materials );
 					objLoader.setPath( 'obj/male02/' );
-					objLoader.load( 'champagne.obj', function ( object ) {
+					objLoader.load( 'airoplane.obj', function ( object ) {
 
-						object.position.y = -0;
+						object.position.y = -250;
 						object.scale.set(8,8,8);
 						scene.add( object );
 
