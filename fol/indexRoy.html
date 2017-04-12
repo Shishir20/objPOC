@@ -89,14 +89,14 @@
 
 				var mtlLoader = new THREE.MTLLoader();
 				mtlLoader.setPath( 'obj/male02/' );
-				mtlLoader.load( 'champagne.mtl', function( materials ) {
+				mtlLoader.load( 'airplane.mtl', function( materials ) {
 
 					materials.preload();
 
 					var objLoader = new THREE.OBJLoader();
 					objLoader.setMaterials( materials );
 					objLoader.setPath( 'obj/male02/' );
-					objLoader.load( 'champagne.obj', function ( object ) {
+					objLoader.load( 'airplane.obj', function ( object ) {
 
 						object.position.y = - 95;
 						object.scale.set(2,2,2);
