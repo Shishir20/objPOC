@@ -58,6 +58,21 @@ Defmech.RotationWithQuaternion = (function()
 
 		scene = new THREE.Scene();
 
+		
+		THREE.Loader.Handlers.add( /\.dds$/i, new THREE.DDSLoader() );
+				var mtlLoader = new THREE.MTLLoader();
+				mtlLoader.setPath( 'obj/male02/' );
+				mtlLoader.load( 'airoplane.mtl', function( materials ) {
+					materials.preload();
+					var objLoader = new THREE.OBJLoader();
+					objLoader.setMaterials( materials );
+					objLoader.setPath( 'obj/male02/' );
+					objLoader.load( 'airoplane.obj', function ( object ) {
+						object.position.y = -250;
+						object.scale.set(8,8,8);
+						scene.add( object );
+					}, onProgress, onError );
+				});
 		// Cube
 
 		var boxGeometry = new THREE.BoxGeometry(200, 200, 200);
