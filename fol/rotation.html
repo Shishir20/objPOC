@@ -176,7 +176,7 @@ Defmech.RotationWithQuaternion = (function()
 		plane = new THREE.Mesh(planeGeometry, planeMaterial);
 		scene.add(plane);
 
-		renderer = new THREE.CanvasRenderer();
+render = new THREE.WebGLRenderer();
 		renderer.setClearColor(0xf0f0f0);
 		renderer.setSize(window.innerWidth, window.innerHeight);
 
