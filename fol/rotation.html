@@ -43,12 +43,14 @@
 	</head>
 
 	<body>
+		<script src="../build/three.js"></script>
 
-<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/three.js/r67/three.min.js"></script>
+
 
 		<script src="js/loaders/DDSLoader.js"></script>
 		<script src="js/loaders/MTLLoader.js"></script>
 		<script src="js/loaders/OBJLoader.js"></script>
+		<script src="js/CanvasRenderer.js"></script>
 
 		<script src="js/Detector.js"></script>
 		<script src="js/libs/stats.min.js"></script>
@@ -176,7 +178,7 @@ Defmech.RotationWithQuaternion = (function()
 		plane = new THREE.Mesh(planeGeometry, planeMaterial);
 		scene.add(plane);
 
-render = new THREE.WebGLRenderer();
+render = new THREE.CanvasRenderer();
 		renderer.setClearColor(0xf0f0f0);
 		renderer.setSize(window.innerWidth, window.innerHeight);
 
