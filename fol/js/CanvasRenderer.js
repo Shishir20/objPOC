@@ -1152,3 +1152,4 @@ THREE.CanvasRenderer = function ( parameters ) {
 
 	}
 
+};
